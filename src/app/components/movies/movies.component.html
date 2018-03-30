@@ -1,62 +1,35 @@
-<div class="row">
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Popular Movies</h3>
   </div>
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
+  <div class="panel-body">
+    <div class="row">
+      <div *ngFor="let movie of popularMovies; let i= index" class="col-md-2">
+        <div *ngIf="i < 6">
+          <img *ngIf="movie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{movie.poster_path}}" />
+          <h4>{{movie.title}}</h4>
+          <p>{{movie.release_date}}</p>
+          <p><a class="btn btn-default" href="#">View Details</a></p>
+        </div>
+      </div>
+    </div>
   </div>
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
+</div>
+
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">In Theatres</h3>
   </div>
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
-  </div>
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
-  </div>
-  <div class="col-md-2">
-    <h2>Heading</h2>
-    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam,
-      eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam
-      voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem
-      sequi nesciunt</p>
-    <p>
-      <a href="#" class="btn btn-default" role="button">View Details</a>
-    </p>
+  <div class="panel-body">
+    <div class="row">
+      <div *ngFor="let tMovie of inTheatresMovies; let i= index" class="col-md-2">
+        <div *ngIf="i < 6">
+          <img *ngIf="tMovie.poster_path" class="thumbnail" src="http://image.tmdb.org/t/p/w500/{{tMovie.poster_path}}" />
+          <h4>{{tMovie.title}}</h4>
+          <p>{{tMovie.release_date}}</p>
+          <p><a class="btn btn-default" href="#">View Details</a></p>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

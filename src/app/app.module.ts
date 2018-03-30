@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -12,7 +13,7 @@ import { MoviesComponent } from './components/movies/movies.component';
     MoviesComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule, HttpClientModule, HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
