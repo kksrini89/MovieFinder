@@ -13,9 +13,9 @@ Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app w
 
 This app helps us to search, list the popular and in theatres running movies.
 
-![List](https://drive.google.com/file/d/13c7vUSKzGHOwzSGBLAURNvRPnLQVwoPZ/view?usp=sharing)
+![List](/Screenshots/List.JPG)
 
-![Search](https://drive.google.com/file/d/15ligcwHn2rE2KOCt10PXJnCRSU-MpNJW/view?usp=sharing)
+![Search](/Screenshots/Search.JPG)
 
-![Detail](https://drive.google.com/file/d/1AwbfW4HkkQEiyQabjY7ZA0VaDf3ryPvi/view?usp=sharing)
+![Detail](/Screenshots/Detail.JPG)
 
