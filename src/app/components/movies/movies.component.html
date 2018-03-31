@@ -24,7 +24,7 @@
             <h4>{{movie.title}}</h4>
             <p>{{movie.release_date}}</p>
             <p>
-              <a class="btn btn-default" href="#">View Details</a>
+              <a class="btn btn-default" [routerLink]="['movie',movie.id]">View Details</a>
             </p>
           </div>
         </div>
@@ -46,7 +46,7 @@
           <h4>{{movie.title}}</h4>
           <p>{{movie.release_date}}</p>
           <p>
-            <a class="btn btn-default" href="#">View Details</a>
+            <a class="btn btn-default" [routerLink]="['movie',movie.id]">View Details</a>
           </p>
         </div>
       </div>
@@ -67,7 +67,7 @@
           <h4>{{tMovie.title}}</h4>
           <p>{{tMovie.release_date}}</p>
           <p>
-            <a class="btn btn-default" href="#">View Details</a>
+            <a class="btn btn-default" [routerLink]="['movie',tMovie.id]">View Details</a>
           </p>
         </div>
       </div>

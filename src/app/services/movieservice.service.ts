@@ -16,11 +16,15 @@ export class MovieserviceService {
 
   getInTheatres(): Observable<Object> {
     return this.http.jsonp('https://api.themoviedb.org/3/discover/movie?' +
-    'primary_release_date.gte=2018-03-25&primary_release_date.lte=2018-03-30&api_key=' + this._apikey, 'callback');
+    'primary_release_date.gte=2018-03-25&primary_release_date.lte=2018-03-31&api_key=' + this._apikey, 'callback');
   }
 
   searchMovies(searchStr: string): Observable<Object> {
     return this.http.jsonp(`https://api.themoviedb.org/3/search/movie?api_key=${this._apikey}&query=${searchStr}`, 'callback');
+  }
+
+  getMovieById(id: number): Observable<Object> {
+    return this.http.jsonp(`https://api.themoviedb.org/3/movie/${id}?&api_key=${this._apikey}`, 'callback');
   }
 
 }
