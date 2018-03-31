@@ -9,7 +9,7 @@ This application is built with Angular 5 Front-end JavaScript Framework and to l
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 
-###ScreenShots
+### ScreenShots
 
 This app helps us to search, list the popular and in theatres running movies.
 
