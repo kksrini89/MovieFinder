@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpClientModule, HttpClientJsonpModule} from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -13,7 +14,7 @@ import { MoviesComponent } from './components/movies/movies.component';
     MoviesComponent
   ],
   imports: [
-    BrowserModule, HttpClientModule, HttpClientJsonpModule
+    BrowserModule, FormsModule , HttpClientModule, HttpClientJsonpModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpClientJsonpModule } from '@angular/common/http';
+import { Observable } from 'rxjs/Observable';
 
 @Injectable()
 export class MovieserviceService {
@@ -9,13 +10,17 @@ export class MovieserviceService {
     this._apikey = 'd9c6fccdb7f12d7d85322074616df297';
   }
 
-  getPopularMovies() {
+  getPopularMovies(): Observable<Object> {
     return this.http.jsonp('https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=' + this._apikey, 'callback');
   }
 
-  getInTheatres() {
+  getInTheatres(): Observable<Object> {
     return this.http.jsonp('https://api.themoviedb.org/3/discover/movie?' +
     'primary_release_date.gte=2018-03-25&primary_release_date.lte=2018-03-30&api_key=' + this._apikey, 'callback');
+  }
+
+  searchMovies(searchStr: string): Observable<Object> {
+    return this.http.jsonp(`https://api.themoviedb.org/3/search/movie?api_key=${this._apikey}&query=${searchStr}`, 'callback');
   }
 
 }
